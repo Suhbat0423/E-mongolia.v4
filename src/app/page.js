@@ -63,7 +63,10 @@ export default function page() {
           <p>Сургуулийн мэдээлэл</p>
         </div>
         <div className={styles.menu}>
-          <img src="" alt="" />
+          <img
+            src="https://www.iconpacks.net/icons/1/free-bar-chart-icon-676-thumb.png"
+            alt=""
+          />
           <p>Үнэт цааснууд / хувьцаа</p>
         </div>
         <div className={styles.menu}>
