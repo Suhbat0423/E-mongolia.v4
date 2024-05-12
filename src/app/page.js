@@ -1,6 +1,12 @@
+// "use client";
 import styles from "./page.module.css";
 import Mail from "../../icon/mail";
 import Ring from "../../icon/ring";
+import House from "../../icon/house";
+import Document from "../../icon/document";
+import Folder from "../../icon/folder";
+import Profile from "../../icon/profile";
+import QR from "../../icon/qr";
 
 export default function page() {
   return (
@@ -78,7 +84,27 @@ export default function page() {
           <p>Үл хөдлөх хөрөнгийн мэдээлэл</p>
         </div>
       </div>
-      <div className={styles.footer}></div>
+      <div className={styles.footer}>
+        <div className={styles.footericons}>
+          <House />
+          <p>Hүүр</p>
+        </div>
+        <div className={styles.footericon}>
+          <Document />
+          <p>Үйлчилгээ</p>
+        </div>
+        <div className={styles.footericon}>
+          <Folder />
+          <p>Нэмэлт</p>
+        </div>
+        <div className={styles.footericon}>
+          <Profile />
+          <p className={styles.footerProfile}>Профайл</p>
+        </div>
+        <div className={styles.circle}>
+          <QR />
+        </div>
+      </div>
     </body>
   );
 }
