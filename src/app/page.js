@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import styles from "./page.module.css";
 import Mail from "../../icon/mail";
 import Ring from "../../icon/ring";
@@ -8,7 +8,48 @@ import Folder from "../../icon/folder";
 import Profile from "../../icon/profile";
 import QR from "../../icon/qr";
 
+import { useState } from "react";
+
 export default function page() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [registration, setRegistration] = useState("");
+  const [gender, setGender] = useState("Er"); // Default value
+  const [image, setImage] = useState(null);
+  const [submittedData, setSubmittedData] = useState([]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "firstName") {
+      setFirstName(value);
+    } else if (name === "lastName") {
+      setLastName(value);
+    } else if (name === "registration") {
+      setRegistration(value);
+    }
+  };
+
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newData = { firstName, lastName, registration, gender, image };
+    setSubmittedData([...submittedData, newData]);
+    setFirstName("");
+    setLastName("");
+    setRegistration("");
+    setImage(null);
+    // Optionally, you can reset gender to its default value here
+    // setGender('Er');
+  };
+
   return (
     <body>
       <header className={styles.header}>
@@ -103,6 +144,58 @@ export default function page() {
         </div>
         <div className={styles.circle}>
           <QR />
+        </div>
+      </div>
+      <div className={styles.login}>
+        <h1>Бүртгүүлэх</h1>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Нэр"
+              name="firstName"
+              value={firstName}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              placeholder="Овог"
+              name="lastName"
+              value={lastName}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              placeholder="Рэгистэр"
+              name="registration"
+              value={registration}
+              onChange={handleInputChange}
+            />
+            <select
+              id="cars"
+              name="cars"
+              value={gender}
+              onChange={handleGenderChange}
+            >
+              <option value="Er">Эр</option>
+              <option value="Em">Эм</option>
+            </select>
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            <button type="submit">Submit</button>
+          </form>
+          <div>
+            {submittedData.map((data, index) => (
+              <div key={index}>
+                <h1>{`First Name: ${data.firstName}`}</h1>
+                <h1>{`Last Name: ${data.lastName}`}</h1>
+                <h1>{`Registration: ${data.registration}`}</h1>
+                <h1>{`Gender: ${data.gender}`}</h1>
+                {data.image && (
+                  <img src={URL.createObjectURL(data.image)} alt="Uploaded" />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </body>
