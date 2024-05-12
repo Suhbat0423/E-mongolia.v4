@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import styles from "./page.module.css";
 import Mail from "../../icon/mail";
 import Ring from "../../icon/ring";
@@ -7,8 +7,6 @@ import Document from "../../icon/document";
 import Folder from "../../icon/folder";
 import Profile from "../../icon/profile";
 import QR from "../../icon/qr";
-
-import { useState } from "react";
 
 export default function page() {
   return (
@@ -109,6 +107,10 @@ export default function page() {
       </div>
       <div className={styles.login}>
         <h1>Бүртгүүлэх</h1>
+        <input type="text" placeholder="нэр" />
+        <input type="text" placeholder="Овог" />
+        <input type="text" placeholder="регистэр" />
+        <input type="image" placeholder="зураг" />
       </div>
     </body>
   );
