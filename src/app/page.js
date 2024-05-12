@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import styles from "./page.module.css";
 import Mail from "../../icon/mail";
 import Ring from "../../icon/ring";
@@ -110,6 +110,7 @@ export default function page() {
         <input type="text" placeholder="нэр" />
         <input type="text" placeholder="Овог" />
         <input type="text" placeholder="регистэр" />
+        <input type="text" placeholder="хүйс" />
         <input type="image" placeholder="зураг" />
       </div>
     </body>
