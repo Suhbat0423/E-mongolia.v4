@@ -190,9 +190,6 @@ export default function page() {
                 <h1>{`Last Name: ${data.lastName}`}</h1>
                 <h1>{`Registration: ${data.registration}`}</h1>
                 <h1>{`Gender: ${data.gender}`}</h1>
-                {data.image && (
-                  <img src={URL.createObjectURL(data.image)} alt="Uploaded" />
-                )}
               </div>
             ))}
           </div>
