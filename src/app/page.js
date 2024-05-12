@@ -17,6 +17,10 @@ export default function page() {
           <Ring />
         </div>
       </header>
+      <div className={styles.id}>
+        <p>Миний бичиг баримтууд</p>
+        <img src="https://i.ibb.co/DtFJw7Y/Clip-path-group.png" alt="" />
+      </div>
     </body>
   );
 }
