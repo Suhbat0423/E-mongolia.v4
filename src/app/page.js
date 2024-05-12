@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import styles from "./page.module.css";
 import Mail from "../../icon/mail";
 import Ring from "../../icon/ring";
