@@ -1,0 +1,9 @@
+.id {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.id img {
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.headerImg {
+  width: 70%;
+}
+
+.headerIcons {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.headerIcon {
+  width: 24px;
+}

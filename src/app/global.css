@@ -1,11 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 body {
-  height: 145vh;
   background-color: white;
+  padding-bottom: 80px;
+}
+
+h4 {
+  color: #4a5e87;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.myPadding {
+  padding: 16px;
+}
+.myInput {
+  width: 100%;
 }
