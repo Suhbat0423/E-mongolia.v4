@@ -8,7 +8,6 @@ const inputStyle =
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({ gender: "Эрэгтэй" });
-  const [modifiedData, setModifiedData] = useState({});
 
   const handleChange = (value, key) => {
     const temp = { ...formData };
@@ -37,7 +36,6 @@ const RegisterForm = () => {
         date,
         register,
       };
-      setModifiedData(userData);
       window.localStorage.setItem("userData", JSON.stringify(userData));
     } catch (error) {
       console.log(error);
@@ -62,6 +60,12 @@ const RegisterForm = () => {
       placeholder: "Регистэр",
       value: formData["register"],
       setValue: (value) => handleChange(value, "register"),
+    },
+    {
+      type: "text",
+      placeholder: "Ургийн овог",
+      value: formData["familyname"],
+      setValue: (value) => handleChange(value, "familyname"),
     },
   ];
   return (
