@@ -6,11 +6,12 @@ export const calcBirthDate = (str) => {
 
 const calcNewYear = (year) => {
   year = 2000 + parseInt(year);
-  let yearStr = year;
+  let yearStr = year - 2000;
   if (year > 2003) {
     year = 2003;
     yearStr = "03";
   }
+  yearStr = yearStr.toString().padStart(2, "0");
   return { year, yearStr };
 };
 
