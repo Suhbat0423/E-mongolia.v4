@@ -1,0 +1,15 @@
+@keyframes example {
+  from {
+    bottom: -500px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+.animation:active {
+  animation-name: example;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  /* background-color: green; */
+}

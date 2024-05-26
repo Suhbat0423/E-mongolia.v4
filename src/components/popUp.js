@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Refresh } from "../../assets/icons";
-import Image from "next/image";
+import styles from "../app/styles/popUp.module.css";
 
 const Popup = ({ isOpen, onClose }) => {
   const [userData, setUserData] = useState({});
@@ -15,9 +15,11 @@ const Popup = ({ isOpen, onClose }) => {
         isOpen ? "visible" : "invisible"
       }`}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50 blur"></div>
-      <div className="absolute bottom-0 bg-white w-full h-3/5 rounded-xl py-5 px-5 flex flex-col items-center">
-        <div className=" h-1 w-14 bg-[#4a5e87] mt-1"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 blur "></div>
+      <div
+        className={`${styles.animation} absolute bottom-0 bg-white w-full h-3/5 rounded-t-xl py-5 px-5 flex flex-col items-center`}
+      >
+        <div className=" h-1 w-14 bg-[#4a5e87] mt-1 "></div>
         <h1 className="mt-5 font-semibold text-[#4a5e87]">Иргэний бүртгэл</h1>
         <div className={" myPadding "}>
           {userData && (
