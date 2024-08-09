@@ -34,7 +34,10 @@ const Documents = () => {
           <div className="absolute top-[90%] text-[10px] left-[30.5%]">
             {userData["register"]}
           </div>
-          <img src="https://i.ibb.co/DtFJw7Y/Clip-path-group.png" alt="" />
+          <img
+            src="https://e-mongolia.mn/static/assets/c64bc212ac0e9ef3ef1e586f9f803ccd.svg"
+            alt=""
+          />
         </div>
       )}
     </div>
