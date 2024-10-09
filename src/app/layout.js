@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 import "./global.css";
 import { Rubik } from "next/font/google";
-import Header from "../components/Header";
 
 const font = Rubik({
   subsets: ["latin"],
@@ -18,9 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={font.className}>
       <body>
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
