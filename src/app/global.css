@@ -11,7 +11,6 @@ body {
   background-color: white;
   padding-bottom: 80px;
   height: 100vh;
-  touch-action: none;
 }
 
 h4 {
