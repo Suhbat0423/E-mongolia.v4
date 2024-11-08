@@ -11,6 +11,9 @@ import {
 } from "../../assets/icons";
 import { usePathname, useRouter } from "next/navigation";
 
+const now = new Date();
+const day = now.getDate();
+
 const Footer = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -52,15 +55,17 @@ const footerItems = [
   {
     icon: <DocumentIcon />,
     label: "Үйлчилгээ",
+    path: "/Uilchilgee",
   },
   {},
   {
     icon: <FolderIcon />,
     label: "Чат",
+    path: "/Chat",
   },
   {
     icon: <ProfileIcon />,
     label: "Профайл",
-    path: "/",
+    path: `/day/${day}`,
   },
 ];
